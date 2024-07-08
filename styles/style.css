@@ -1,0 +1,240 @@
+/*------- GENERAL -------- */
+@font-face {
+  font-family: "DIN Pro";
+  src: local("DINPro-Bold"), url("../fonts/DINPro-Bold.woff2") format("woff2"),
+    url("../fonts/DINPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Pro";
+  src: local("DINPro-Medium"),
+    url("../fonts/DINPro-Medium.woff2") format("woff2"),
+    url("DINPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: local("DINPro-CondensedMedium"),
+    url("../fonts/DINPro-CondensedMedium.woff2") format("woff2"),
+    url("../fonts/DINPro-CondensedMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Pro";
+  src: local("DINPro"), url("../fonts/DINPro.woff2") format("woff2"),
+    url("../fonts/DINPro.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --main-bg-color: rgb(248, 248, 248);
+  --card-bg-color: #fff;
+  --label-bg-color: #41b4b4;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: "DIN Pro", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.text {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: start;
+  column-gap: 161px;
+  max-width: 1824px;
+  padding: 85px 80px 91px 80px;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0;
+}
+
+/* -------MAIN CONTENT------ */
+.main {
+  margin: 35px 48px;
+  border-radius: 22px;
+  background-color: var(--main-bg-color);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-image: url("../img/main-bg.png");
+}
+.main__title {
+  font-family: "DIN Pro Condensed";
+  font-size: 60px;
+  line-height: 113%;
+  letter-spacing: -1.9px;
+}
+.main__title-emph {
+  color: rgb(65, 180, 180);
+}
+.steps {
+  margin-top: 22px;
+  display: flex;
+  min-height: 262px;
+  flex-wrap: wrap;
+  gap: 70px 100px;
+}
+.step {
+  position: relative;
+  border-radius: 28px;
+  background-color: var(--card-bg-color);
+  background-repeat: no-repeat;
+}
+.step-one {
+  position: relative;
+  flex: 0 0 39.7%;
+  padding: 32px 40px 95px 33px;
+  align-self: start;
+}
+
+.step-one::after,
+.step-two::before,
+.step-two::after,
+.step-three::before,
+.step-three::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.step-one::after {
+  top: 41%;
+  right: -91.5px;
+  width: 88.5px;
+  height: 20px;
+  background-image: url("../img/arrow-right.svg");
+  background-position: right center;
+}
+.step-two::before {
+  position: absolute;
+  top: 108%;
+  left: -378px;
+  width: 550px;
+  height: 20px;
+  background-image: url("../img/line-left.svg");
+}
+.step-two::after {
+  top: 264px;
+  left: 132px;
+  width: 550px;
+  height: 27px;
+  background-image: url("../img/line-down.png");
+}
+.step-three::before {
+  position: absolute;
+  top: -47px;
+    left: 196px;
+  width: 10px;
+  height: 40px;
+  background-image: url("../img/arrow-down.svg");
+}
+.step-three::after {
+  position: absolute;
+  top: 122px;
+  left: 522px;
+  width: 120px;
+  height: 20px;
+  background-image: url("../img/arrow-right.svg");
+  background-position: right center;
+}
+.step-two {
+  position: relative;
+  flex: 0 0 51.8%;
+  padding: 32px 29px 63px;
+  background-image: url("../img/headphones-desktop.png");
+  background-position: 96% 117%;
+}
+.step-three {
+  position: relative;
+  margin-bottom: 24px;
+  align-self: start;
+  flex: 0 0 45.6%;
+  padding: 32px 40px 63px;
+  background-image: url("../img/tick-desktop.png");
+  background-position: 90% 77%;
+}
+.step-four {
+  align-self: end;
+  justify-self: end;
+  flex: 0 0 45.7%;
+  padding: 39px 33px 70px;
+  background-image: url("../img/program-desktop.png");
+  background-position: 100% 120%;
+}
+.step__text-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  max-width: 305px;
+}
+.step__title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 110%;
+  color: #373737;
+}
+.step__descr {
+  line-height: 133%;
+  color: #19192b;
+}
+
+.step__label {
+  padding: 2px 13px;
+  border-radius: 50px;
+  position: absolute;
+  top: -13px;
+  background-color: var(--label-bg-color);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 130%;
+  color: #fff;
+}
+
+.step__label-tick {
+  top: -30px;
+  padding: 15.4px 10.54px 15px 13.3px;
+}

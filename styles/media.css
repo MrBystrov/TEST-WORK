@@ -1,0 +1,138 @@
+@media (max-width: 1900px) {
+  .steps {
+    flex-direction: column;
+    row-gap: 110px;
+    width: 34%;
+  }
+  .step-three {
+    margin-bottom: 0;
+  }
+  .step-one, .step-two, .step-three, .step-four {
+      align-self: stretch;
+      min-width: 535px;
+    }
+  .step-one::after {
+    transform: rotate(90deg);
+    top: 0;
+    left: 40%;
+  }
+  .step-two::after {
+    transform: rotate(90deg);
+    top: 539px;
+    left: -4%;
+    background-image: url("../img/arrow-right.svg");
+  }
+  .step-three::after {
+    transform: rotate(90deg);
+    background-image: url("../img/arrow-right.svg");
+    left: 36%;
+  }
+  .step-one::after,
+  .step-three::after {
+    top: 262px;
+  }
+
+  .step-three::before,
+  .step-two::before {
+    display: none;
+  }
+}
+
+@media (max-width: 1350px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .main {
+    margin: 0;
+    background-image: none;
+  }
+  .container {
+    padding: 44px 16px;
+    flex-direction: column;
+    row-gap: 83px;
+  }
+  .main__title {
+    font-size: 21px;
+    letter-spacing: -0.6px;
+  }
+  .main__title-emph {
+    color: inherit;
+  }
+
+  .steps {
+    margin-top: 0;
+    row-gap: 37px;
+  }
+  .step {
+    flex: 1 1 100%;
+    row-gap: 37.5px;
+    background-position: 90% 80%;
+  }
+    .step-one,
+    .step-two,
+    .step-three,
+    .step-four {
+      align-self: stretch;
+      min-width: 288px;
+    }
+  .step__title {
+    font-size: 16px;
+    line-height: 100%;
+  }
+  .step__text-content {
+    row-gap: 20px;
+    max-width: 180px;
+  }
+  .step__descr {
+    max-width: 148px;
+    font-size: 14px;
+    line-height: 129%;
+  }
+  .step-one .step__descr {
+    max-width: 180px;
+  }
+  .step-one .step__text-content {
+    row-gap: 16px;
+  }
+
+  .step-four .step__descr {
+    max-width: 140px;
+  }
+  .step-one {
+    row-gap: 16px;
+    padding: 32px 20px 34px;
+  }
+  .step-two,
+  .step-three {
+    padding: 32px 20px 26px;
+  }
+
+  .step-two {
+    background-image: url("../img/headphones-mob.png");
+  }
+
+  .step-three {
+    margin-bottom: 0;
+    background-image: url("../img/tick-mob.png");
+  }
+  .step-four {
+    padding: 32px 20px 31px;
+    background-image: url("../img/program-mob.png");
+  }
+
+  .step__label {
+    padding: 4.5px 13.5px;
+    font-size: 12px;
+  }
+  .step__label-tick {
+    padding: 8.8px 5.8px 8.5px 7.3px;
+    top: -13px;
+  }
+  .step__label-tick img {
+    width: 20px;
+    height: 16px;
+  }
+}
