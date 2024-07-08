@@ -41,6 +41,7 @@
 @media (max-width: 1350px) {
   .container {
     flex-direction: column;
+    row-gap: 83px;
   }
 }
 
